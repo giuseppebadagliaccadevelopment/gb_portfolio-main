@@ -1,0 +1,68 @@
+@mixin small {
+  @media only screen and (min-width: 450px) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media only screen and (min-width: 768px) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media only screen and (min-width: 992px) {
+    @content;
+  }
+}
+@mixin desktoplg {
+  @media only screen and (min-width: 1200px) {
+    @content;
+  }
+}
+//if needed
+@mixin small_laptop_custom {
+  @media only screen and (min-width: 768px) and (max-height: 650px) {
+    @content;
+  }
+}
+
+//if custom fonts needed
+@font-face {
+  font-family: "Arsenal-Bold";
+  src: url("/fonts/Arsenal-Bold.woff2") format("woff2");
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Arsenal-Regular";
+  src: url("/fonts/Arsenal-Regular.woff2") format("woff2");
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Light Font";
+  src: url("/fonts/MPLUS1-Light.woff2") format("woff2");
+  font-style: normal;
+  font-display: swap;
+}
+
+@keyframes rockRightAnimation {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(5px);
+  }
+}
+// animation: rockRightAnimation 0.5s infinite alternate;
+
+// animation: rockLeftAnimation 0.5s infinite alternate;
+@keyframes rockLeftAnimation {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-5px);
+  }
+}

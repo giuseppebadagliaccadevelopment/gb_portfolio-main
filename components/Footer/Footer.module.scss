@@ -1,0 +1,148 @@
+@use "@/styles/mixin.scss" as mixin;
+.wrapper {
+  border: 2px solid #000;
+  background-color: #000;
+  display: flex;
+  flex-direction: row;
+  // Horizontal
+  justify-content: center;
+  // Vertical
+  align-items: center;
+  .inner-wrap {
+    color: #fff;
+    margin: 0 2rem;
+    @include mixin.tablet {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: flex-end;
+    }
+    .sec-one,
+    .sec-two {
+      min-height: 150px;
+      // max-width: 500px;
+      @include mixin.tablet {
+        min-height: 125px;
+        border-bottom: none;
+      }
+      p {
+        margin: 0.35em 0;
+      }
+      @include mixin.tablet {
+        flex: 1;
+      }
+    }
+    .sec-one {
+      text-align: center;
+      border-bottom: 2px solid #fff;
+      display: flex;
+      flex-direction: column;
+      // Horizontal
+      justify-content: center;
+      // Vertical
+      align-items: center;
+      padding: 1rem 0;
+      @include mixin.tablet {
+        padding: 0;
+        border-bottom: none;
+        flex-direction: row;
+        justify-content: space-between;
+      }
+      .sec-one-flex {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        @include mixin.tablet {
+          align-items: flex-start;
+        }
+        .buttonflex {
+          margin: 0.7rem 0 0 0;
+          display: flex;
+          flex-direction: row;
+          justify-content: center;
+          align-items: center;
+          @include mixin.tablet {
+            margin: 0;
+          }
+          .linkedin-wrap {
+            height: 50px;
+            width: 50px;
+            position: relative;
+            @include mixin.tablet {
+              margin: 0 1rem 0 0;
+            }
+            img {
+              object-fit: contain;
+            }
+          }
+          .contact-wrap {
+            height: 50px;
+            width: 50px;
+            position: relative;
+            @include mixin.tablet {
+              margin: 0 0 0 1rem;
+            }
+            img {
+              object-fit: contain;
+            }
+          }
+        }
+      }
+    }
+    .sec-two {
+      display: flex;
+      flex-direction: column;
+      // Horizontal
+      justify-content: center;
+      // Vertical
+      align-items: center;
+      @include mixin.tablet {
+        // align-items: flex-end;
+        justify-content: space-between;
+        flex-direction: row;
+        border-left: 2px solid #fff;
+      }
+      .contact-wrap {
+        height: 50px;
+        width: 50px;
+        position: relative;
+        @include mixin.tablet {
+          margin: 0 0 0 1rem;
+        }
+        img {
+          object-fit: contain;
+        }
+      }
+      p {
+        @include mixin.tablet {
+          text-align: end;
+        }
+        a {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}
+
+.removeOnTab {
+  @include mixin.tablet {
+    display: none;
+  }
+}
+
+.displayOnTab {
+  display: none;
+  @include mixin.tablet {
+    display: block;
+  }
+}
+.sec-two-flex {
+  p {
+    line-height: 1.3rem;
+    &:nth-child(2) {
+      padding: 1rem 0 0 0;
+    }
+  }
+}

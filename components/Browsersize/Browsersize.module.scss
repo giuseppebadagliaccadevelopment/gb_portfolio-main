@@ -1,0 +1,21 @@
+@use "@/styles/mixin.scss" as mixin;
+
+.browserwidth {
+  padding: 3px 3px 2px;
+  background-color: rgba(255, 255, 255, 0.4);
+  color: black;
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  z-index: 10;
+  width: unset;
+  font-size: 8px;
+  font-family: Arial, Helvetica, sans-serif;
+  // display: none;
+  text-align: right;
+  @include mixin.tablet {
+    padding: 3px 6px;
+    font-size: 10px;
+    // display: block;
+  }
+}

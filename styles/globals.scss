@@ -1,0 +1,82 @@
+@use "./mixin.scss" as mixin;
+@import "./reset.scss";
+
+:root {
+  --max-width: 1100px;
+  --global-padding-left: 3rem;
+  --global-padding-right: 3rem;
+}
+
+html,
+body {
+  scroll-behavior: smooth;
+  max-width: 100vw;
+  overflow-x: hidden;
+  font-weight: 300; //300,500,700
+  // font-family: "Arsenal-Bold";
+  // font-family: "Arsenal-Regular";
+  font-family: "Light Font";
+  letter-spacing: 0.1em;
+}
+h1 {
+  color: #fff;
+  text-transform: uppercase;
+  font-family: "Arsenal-Regular";
+  font-size: 2rem;
+  padding: 1rem;
+  text-align: center;
+  letter-spacing: 0.05em;
+}
+h2 {
+  color: #fff;
+  text-transform: uppercase;
+  font-family: "Arsenal-Regular";
+  font-size: 2rem;
+  text-align: center;
+  letter-spacing: 0.05em;
+  @include mixin.tablet {
+    text-align: start;
+  }
+}
+p {
+  color: #fff;
+  line-height: 1.9em;
+  text-align: center;
+  @include mixin.tablet {
+    text-align: start;
+  }
+}
+.inner-wrap {
+  width: 100%;
+  max-width: 1600px;
+  margin: 0 auto;
+}
+
+#projects {
+  scroll-margin-top: 2.4rem;
+  @include mixin.tablet {
+    scroll-margin-top: 3.7rem;
+  }
+}
+// .swiper-button-next::after,
+// .swiper-button-prev::after {
+//   display: none;
+// }
+// .swiper-button-next {
+//   background-image: url("/icons/down-arrow-svgrepo-com.svg");
+//   transform: rotate(-90deg);
+//   background-size: contain;
+//   background-repeat: no-repeat !important;
+//   background-position: center !important;
+//   width: 50px !important;
+//   height: 50px !important;
+// }
+// .swiper-button-prev {
+//   background-image: url("/icons/down-arrow-svgrepo-com.svg");
+//   transform: rotate(90deg);
+//   background-size: contain;
+//   background-repeat: no-repeat !important;
+//   background-position: center !important;
+//   width: 50px !important;
+//   height: 50px !important;
+// }

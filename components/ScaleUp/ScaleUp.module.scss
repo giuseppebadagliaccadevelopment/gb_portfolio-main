@@ -1,0 +1,6 @@
+@use "@/styles/mixin.scss" as mixin;
+.wrapper {
+  opacity: 0;
+  visibility: hidden;
+  width: 100%;
+}

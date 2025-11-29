@@ -1,0 +1,184 @@
+@use "@/styles/mixin.scss" as mixin;
+.wrapper {
+  opacity: 0;
+  visibility: hidden;
+  padding: 5rem 0;
+  background-color: #2e3141;
+  min-height: max(100vh, 660px);
+  padding: 4rem 2rem;
+  @include mixin.tablet {
+    min-height: max(100vh, 760px);
+  }
+  .inner-wrap {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    &:nth-child(2) {
+      p {
+        margin: 0 !important;
+      }
+    }
+    .top,
+    .bottom {
+      width: 100%;
+    }
+    .top {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      @include mixin.tablet {
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: space-between;
+        // padding: 0 2.5rem;
+        margin: 0 0 2rem 0;
+      }
+      .headshot {
+        opacity: 0;
+        visibility: hidden;
+        position: relative;
+        width: 350px;
+        height: 350px;
+        border-radius: 50%; /* This makes the square a circle */
+        overflow: hidden;
+
+        @include mixin.tablet {
+          width: 450px;
+          height: 450px;
+        }
+        img {
+          object-fit: cover;
+          object-position: top;
+        }
+      }
+      h1 {
+        opacity: 0;
+        visibility: hidden;
+        @include mixin.tablet {
+          align-self: flex-end;
+          font-size: clamp(1rem, 4vw, 4rem);
+          padding: 0;
+          text-align: end;
+          max-width: 300px;
+        }
+        @include mixin.desktop {
+          max-width: clamp(200px, 50vw, 900px);
+        }
+      }
+    }
+    .bottom {
+      opacity: 0;
+      visibility: hidden;
+      position: relative;
+      @include mixin.tablet {
+        // margin: 1rem 2rem 2rem 2rem;
+      }
+      .bottom-border {
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        margin: 0 auto;
+        width: 100%;
+        border-top: 1px solid #fff;
+        @include mixin.tablet {
+          left: 0;
+          transform: translateX(0);
+        }
+      }
+      p {
+        text-transform: uppercase;
+        margin: 2rem 0;
+        max-width: clamp(968px, 85vw, 1175px);
+        font-size: 0.8rem;
+        @include mixin.small {
+          font-size: 1rem;
+        }
+        @include mixin.tablet {
+          font-size: clamp(1rem, 1.5vw, 1.25rem);
+        }
+      }
+    }
+    a {
+      align-self: center;
+      @include mixin.tablet {
+        align-self: flex-start;
+      }
+      &.marginTop {
+        margin: 2rem 0 0 0;
+      }
+    }
+  }
+}
+.flex-btns {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  // Horizontal
+  justify-content: center;
+  // Vertical
+  align-items: center;
+  @include mixin.tablet {
+    justify-content: flex-start;
+  }
+  // .btn {
+  //   background-color: #fff;
+  //   padding: 15px 30px;
+  //   margin: 0 0.5rem;
+  //   max-width: 165px;
+  //   display: flex;
+  //   flex-direction: row;
+  //   justify-content: center;
+  //   align-items: center;
+  //   transition: background-color 0.2s ease-in, color 0.1s ease-in;
+  //   border: 2px solid #fff;
+  //   @include mixin.desktoplg {
+  //     max-width: clamp(165px, 12vw, 185px);
+  //   }
+  //   p {
+  //     text-transform: uppercase;
+  //     color: #2e3141;
+  //     // transition: color 0.1s ease-in;
+  //   }
+  //   &:hover {
+  //     @include mixin.small {
+  //       color: #fff;
+  //       background-color: transparent;
+  //       p {
+  //         color: #fff;
+  //       }
+  //     }
+  //   }
+  // }
+}
+.btn {
+  background-color: #fff;
+  padding: 15px 30px;
+  margin: 0 0.5rem;
+  max-width: 165px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 0.2s ease-in, color 0.1s ease-in;
+  border: 2px solid #fff;
+  @include mixin.desktoplg {
+    max-width: clamp(165px, 12vw, 185px);
+  }
+  p {
+    text-transform: uppercase;
+    color: #2e3141;
+    // transition: color 0.1s ease-in;
+  }
+  &:hover {
+    @include mixin.small {
+      color: #fff;
+      background-color: transparent;
+      p {
+        color: #fff;
+      }
+    }
+  }
+}

@@ -1,0 +1,316 @@
+@use "@/styles/mixin.scss" as mixin;
+.wrapper {
+  background-color: #45558d;
+  min-height: max(100vh, 660px);
+  padding: 2rem;
+  @include mixin.tablet {
+    padding: 2rem 0;
+    min-height: max(100vh, 760px);
+    display: flex;
+    flex-direction: row;
+    // Horizontal
+    justify-content: center;
+    // Vertical
+    align-items: center;
+  }
+  .inner-wrap {
+    @include mixin.tablet {
+      margin: 0 2rem;
+    }
+    h2 {
+      margin: 0 0 4rem 0;
+      // text-decoration: underline;
+      // text-decoration-thickness: 2px;
+      // text-underline-offset: 0.25em;
+      border-bottom: 1px solid #fff;
+      padding: 0 0 0.35em 0;
+      @include mixin.tablet {
+        font-size: clamp(1rem, 4vw, 4rem);
+      }
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1rem;
+      @include mixin.tablet {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.7rem;
+      }
+
+      @include mixin.desktop {
+        grid-template-columns: repeat(3, 1fr);
+      }
+
+      .grid-item {
+        border-bottom: 2px solid transparent;
+        border-right: 2px solid transparent;
+        transition: border-right 0.25s ease-in, border-bottom 0.25s ease-in;
+        .top {
+          background-color: #000;
+          position: relative;
+          min-height: 300px;
+          aspect-ratio: 1/1;
+          width: 100%;
+          @include mixin.desktop {
+            min-height: 200px;
+          }
+          img {
+            object-fit: contain;
+          }
+        }
+        .bottom {
+          min-height: 300px;
+          padding: 2rem 0;
+          display: flex;
+          flex-direction: column;
+          justify-content: flex-start;
+          align-items: center;
+          @include mixin.tablet {
+            justify-content: flex-start;
+            align-items: flex-start;
+          }
+          .group,
+          .description {
+            font-size: 0.9rem;
+            margin: 0 0 1.5rem 0;
+          }
+          .role,
+          .company {
+            // border: 2px solid blue;
+            // color: #2e3141;
+            font-family: "Arsenal-Bold";
+            text-transform: uppercase;
+          }
+          .role {
+            margin: 0.5rem 0 0 0;
+          }
+          .company {
+            margin: 0 0 1rem 0;
+          }
+          h3 {
+            color: #2e3141;
+            font-family: "Arsenal-Bold";
+            text-transform: uppercase;
+            font-size: 2rem;
+            text-align: center;
+            width: 100%;
+            @include mixin.tablet {
+              width: fit-content;
+            }
+          }
+          .btn {
+            background-color: #2e3141;
+            padding: 15px 30px;
+            max-width: 165px;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            transition: background-color 0.2s ease-in, color 0.1s ease-in;
+            @include mixin.desktoplg {
+              max-width: clamp(165px, 12vw, 185px);
+            }
+            p {
+              text-transform: uppercase;
+              color: #fff;
+              // transition: color 0.1s ease-in;
+            }
+            // &:hover {
+            //   @include mixin.small {
+            //     background-color: #ffffff53;
+            //   }
+            // }
+          }
+        }
+
+        &.parkArbor {
+          .top {
+            background-color: #f6f3e8;
+            img {
+              padding: 2rem;
+            }
+          }
+        }
+
+        &.fiatHouse {
+          .top {
+            background-color: #e2132b;
+            .top-inner {
+              position: relative;
+              height: 100%;
+              .line-one {
+                position: absolute;
+                top: 2%;
+                left: 2.7rem;
+                min-width: 57%;
+                min-height: 4.5%;
+                background-color: #61d2a2;
+              }
+              .line-two {
+                position: absolute;
+                background-color: #fff81a;
+                bottom: 4rem;
+                right: 0rem;
+                min-width: 15%;
+                min-height: 4.5%;
+              }
+              .line-three {
+                position: absolute;
+                background-color: #54b8f3;
+                bottom: 5%;
+                right: 0rem;
+                min-width: 95%;
+                min-height: 4.5%;
+              }
+            }
+            img {
+              padding: 4rem;
+            }
+          }
+        }
+
+        &.atlas {
+          .top {
+            background-color: #0f1f2a;
+            .top-inner {
+              position: relative;
+              height: 100%;
+              .line-one {
+                position: absolute;
+                bottom: 0;
+                width: 100%;
+                height: 10%;
+                background-color: #225250;
+              }
+              .line-two {
+                position: absolute;
+                top: 0;
+                width: 100%;
+                height: 10%;
+                background-color: #225250;
+              }
+            }
+            img {
+              padding: 0 2rem 0 2rem;
+            }
+          }
+        }
+        &.fieldsGrade {
+          .top {
+            .top-inner {
+              position: relative;
+              height: 100%;
+              .line-one {
+                position: absolute;
+                bottom: 0;
+                width: 100%;
+                height: 100%;
+                border-top: 2px solid #fff;
+                border-radius: 100% 100% 0 0;
+              }
+              .line-two {
+                position: absolute;
+                top: 5rem;
+                left: 50%;
+                transform: translateX(-50%);
+                height: 35%;
+                border: 1px solid #fff;
+              }
+            }
+            img {
+              padding: 50% 4rem 0 4rem;
+            }
+          }
+        }
+        &.claremont {
+          .top {
+            background-color: #dd5b2d;
+            .top-inner {
+              height: 100%;
+              .bottom-icon {
+                overflow: hidden;
+                position: absolute;
+                bottom: 0;
+                z-index: 2;
+                width: 100%;
+                height: 65%;
+                img.bottom {
+                  object-fit: cover;
+                  padding: 0 !important;
+                }
+              }
+            }
+            img {
+              padding: 2rem;
+            }
+          }
+        }
+        &.wyldes {
+          .top {
+            .top-inner {
+              height: 100%;
+              .bottom-icon {
+                overflow: hidden;
+                position: absolute;
+                bottom: 0;
+                z-index: 2;
+                width: 100%;
+                height: 100%;
+                img.bottom {
+                  object-fit: cover;
+                  padding: 0 !important;
+                }
+              }
+            }
+            img {
+              z-index: 3;
+              padding: 2rem;
+            }
+          }
+        }
+        &.illustrator {
+          .top {
+            // background-color: #f1ede8;
+            .top-inner {
+              position: relative;
+              height: 100%;
+              .line-one {
+                position: absolute;
+                top: 43%;
+                left: 0;
+                border: 1px solid #bca675;
+                width: 35%;
+              }
+              .line-two {
+                position: absolute;
+                right: 0;
+                top: 43%;
+                border: 1px solid #bca675;
+                width: 35%;
+              }
+            }
+            img {
+              padding: 2rem;
+            }
+          }
+        }
+        &.skyeLofts {
+          .top {
+            img {
+              padding: 2rem;
+            }
+          }
+        }
+        &:hover {
+          @include mixin.small {
+            border-bottom: 2px solid #fff;
+            border-right: 2px solid #fff;
+          }
+          .btn {
+            background-color: #ffffff53;
+          }
+        }
+      }
+    }
+  }
+}

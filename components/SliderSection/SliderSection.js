@@ -16,17 +16,17 @@ gsap.registerPlugin(ScrollTrigger);
 
 export default function SliderSection({}) {
   const data = [
-    {
-      imgPath: "/images/port_icons/P&A_MapPoint.svg",
-      name: "Park and Arbor",
-      tech: "next.js",
-      company: "new world group",
-      role: "Senior Software Engineer",
-      description:
-        "Park and Arbor is a luxury rental brand located in Old Tappan, NJ, designed to reflect the essence of contemporary elegance. The site build highlights modern architecture and luxurious finishes, offering a refined user experience.",
-      linkout: "https://www.parkandarbor.com/",
-      itemClass: "parkArbor",
-    },
+    // {
+    //   imgPath: "/images/port_icons/P&A_MapPoint.svg",
+    //   name: "Park and Arbor",
+    //   tech: "next.js",
+    //   company: "new world group",
+    //   role: "Senior Software Engineer",
+    //   description:
+    //     "Park and Arbor is a luxury rental brand located in Old Tappan, NJ, designed to reflect the essence of contemporary elegance. The site build highlights modern architecture and luxurious finishes, offering a refined user experience.",
+    //   linkout: "https://www.parkandarbor.com/",
+    //   itemClass: "parkArbor",
+    // },
     {
       imgPath: "/images/port_icons/FH_logo.svg",
       name: "Fiat House",
@@ -93,17 +93,17 @@ export default function SliderSection({}) {
       linkout: "https://www.livetheillustrator.com/",
       itemClass: "illustrator",
     },
-    {
-      imgPath: "/images/port_icons/SkyeLofts_Logo-White.svg",
-      name: "Skye Lofts",
-      tech: "JavasScript, PHP",
-      company: "new world group",
-      role: "Software Engineer",
-      description:
-        "Skye Lofts landing page showcases the best of both worlds, highlighting the unique features of both Skye Lofts North and South.",
-      linkout: "https://skyelofts.com/",
-      itemClass: "skyeLofts",
-    },
+    // {
+    //   imgPath: "/images/port_icons/SkyeLofts_Logo-White.svg",
+    //   name: "Skye Lofts",
+    //   tech: "JavasScript, PHP",
+    //   company: "new world group",
+    //   role: "Software Engineer",
+    //   description:
+    //     "Skye Lofts landing page showcases the best of both worlds, highlighting the unique features of both Skye Lofts North and South.",
+    //   linkout: "https://skyelofts.com/",
+    //   itemClass: "skyeLofts",
+    // },
   ];
   return (
     <div className={styles["wrapper"]}>

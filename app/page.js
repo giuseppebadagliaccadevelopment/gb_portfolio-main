@@ -21,7 +21,6 @@ export default function Home() {
 
   return (
     <>
-      {/* test */}
       <Hero data={heroData} />
       <div id="projects">
         <SliderSection />

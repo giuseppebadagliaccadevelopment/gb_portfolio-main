@@ -44,7 +44,9 @@
       .grid-item {
         border-bottom: 2px solid transparent;
         border-right: 2px solid transparent;
-        transition: border-right 0.25s ease-in, border-bottom 0.25s ease-in;
+        transition:
+          border-right 0.25s ease-in,
+          border-bottom 0.25s ease-in;
         .top {
           background-color: #000;
           position: relative;
@@ -106,7 +108,9 @@
             flex-direction: row;
             justify-content: center;
             align-items: center;
-            transition: background-color 0.2s ease-in, color 0.1s ease-in;
+            transition:
+              background-color 0.2s ease-in,
+              color 0.1s ease-in;
             @include mixin.desktoplg {
               max-width: clamp(165px, 12vw, 185px);
             }
@@ -166,6 +170,30 @@
             img {
               padding: 4rem;
             }
+          }
+        }
+        &.VermellaP {
+          .top {
+            background-color: #e7e8df;
+            overflow: hidden;
+            .top-inner {
+              height: 100%;
+              .bottom-icon {
+                overflow: hidden;
+                position: absolute;
+                bottom: 0;
+                z-index: 2;
+                width: 105%;
+                height: 25%;
+                img.bottom {
+                  object-fit: cover;
+                  padding: 0 !important;
+                }
+              }
+            }
+          }
+          img {
+            padding: 2rem;
           }
         }
 

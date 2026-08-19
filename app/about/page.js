@@ -8,7 +8,7 @@ export const metadata = {
 };
 
 const heroData = {
-  imgPath: "/images/port_icons/Joe0106_Square copy.jpg",
+  imgPath: "/images/port_icons/IMG_0002.jpg",
   btnText: "contact",
   btnLink: "/contact",
   withExtra: true,

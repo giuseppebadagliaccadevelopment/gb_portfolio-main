@@ -28,6 +28,17 @@ export default function SliderSection({}) {
     //   itemClass: "parkArbor",
     // },
     {
+      imgPath: "/icons/SecondaryLogo_Horizontal_2-Color.svg",
+      name: "Vermella Paramus",
+      tech: "next.js",
+      company: "new world group",
+      role: "Senior Software Engineer",
+      description:
+        "change here.. is a modern rental property in Fort Lee, NJ. Site is designed to showcase the brand's modern luxury and innovative features. The site highlights over 300 new apartments and boasts unique offerings like an on-site fleet of electric FIAT v.",
+      linkout: "https://www.vermellaparamus.com/",
+      itemClass: "VermellaP",
+    },
+    {
       imgPath: "/images/port_icons/FH_logo.svg",
       name: "Fiat House",
       tech: "next.js",
@@ -157,6 +168,18 @@ export default function SliderSection({}) {
                           <div className={styles["bottom-icon"]}>
                             <Image
                               src={"/images/port_icons/BG-pattern.svg"}
+                              alt={""}
+                              fill
+                              className={styles["bottom"]}
+                            />
+                          </div>
+                        </div>
+                      )}
+                      {itemClass === "VermellaP" && (
+                        <div className={styles["top-inner"]}>
+                          <div className={styles["bottom-icon"]}>
+                            <Image
+                              src={"/icons/Gold-Pattern-2.svg"}
                               alt={""}
                               fill
                               className={styles["bottom"]}
